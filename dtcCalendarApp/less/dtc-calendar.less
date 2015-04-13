@@ -1,0 +1,176 @@
+//out: ../css/dtc-calendar.css 
+
+//navigation top bar 
+@height-header: 70px;
+@width-button: 70px;
+@height-button: 70px;
+@height-img-button: 60px;
+@width-img-button: 40px;
+@font-size-dateTitle: 3.5em;
+
+//week-name bar
+@height-week-name: 30px; 
+@font-size-week-name: 1.5em;
+
+//month box
+@font-size-month: 2.5em;
+@height-month: 50px;
+
+@font-face {
+    font-family: "Athelas";
+    src: url("../font/Athelas.ttc");
+}
+@font-face {
+    font-family: "Cochin";
+    src: url("../font/Cochin.ttc");
+}
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @height-header;
+    
+    background-image: url(../img/red-block.png);
+    background-size: 100% 100%;
+}
+.header-header {
+    position: absolute;
+    top: -@height-header;
+    left: @width-button;
+    right: @width-button;
+    height: @height-header;
+    
+    text-align: center;
+    line-height: @height-header;
+
+    color: white;
+    font-family: "Athelas";
+    font-size: @font-size-dateTitle;
+}
+.header-button {
+    margin: 5px;
+    height: @height-button;
+    width: @width-button;
+
+    text-align: center;
+    line-height: 70px;        
+}
+.header-button.next {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.next2 {
+    display: inline-block;
+    text-align: center;
+    width: @width-img-button;
+    height: @height-img-button;
+}
+.header-button.previous {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.prev {
+    display: inline-block;
+    text-align: center;
+    width: @width-img-button;
+    height: @height-img-button;
+}
+.calendar {
+    position: absolute;
+    top: @height-header;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #7d8291; 
+}
+.week-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    height: @height-week-name;
+    line-height: @height-week-name;
+    
+    font-size: @font-size-week-name;
+    font-family: "Athelas";
+    text-align: center;
+    color: #fff;
+}
+.date-name-title {
+    display: inline-block;
+
+    background-image: url(../img/grey-block.png);
+    background-size: 100% 100%;
+    
+    width: calc(100% / 7);
+}
+.month {            
+    
+    position: absolute;
+    top: @height-week-name;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: @font-size-month;
+    overflow-y: auto;
+}
+.weeks {
+    display: table;
+    width: 100%;
+    height: calc(100% / 6);
+}
+.case {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box;
+    
+    display: table-cell;
+    width: calc(100% / 7);
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Cochin";
+    border: 1px solid rgba(255, 255, 255, 0.74);
+}
+.day {
+    background-image: url(../img/green-block.png);
+    background-size: 100% 100%;
+    color: white;
+}
+.daysOff {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box;
+    background-image: url(../img/light-grey-block.png);
+    background-size: 100% 100%;
+    color: grey;
+}
+.today {
+    box-sizing: border-box; /* Opera/IE 8+ */
+   -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+   -webkit-box-sizing: border-box;
+    color: #9d2a2a;       
+    background-image: url(../img/light-red-block.png); 
+    background-size: 100% 100%;
+} 
+.ferie { 
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box;
+    color: #3f841e; 
+}
+.ng-enter, .ng-leave {
+    -webkit-animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+}
+.right.ng-enter { -webkit-animation-name: slideInRight; }
+.right.ng-leave { -webkit-animation-name: slideOutLeft; }
+.left.ng-enter { -webkit-animation-name: slideInLeft; }
+.left.ng-leave { -webkit-animation-name: slideOutRight; }
+.fade.ng-enter { -webkit-animation-name: fadeIn; }
+.fade.ng-leave { -webkit-animation-name: fadeOut; }
+
