@@ -1,0 +1,23 @@
+<header class="header-header">
+    {{calendarYearCtrl.dateTitle.format("YYYY") | capitalize}}
+</header>
+<div class="year">
+    <div class="trimestre" ng-repeat="trimestre in calendarYearCtrl.year">
+        <div class="year-trimestre-month" ng-repeat="month in trimestre.trimestres">
+           <header class="year-week-name">
+                <span class="year-date-name-title">{{month.name}}</span>
+            </header>
+            <div class="year-month" ng-class="{'year-month-last': month.name === 'mars' || month.name === 'juin' || month.name === 'septembre' || month.name === 'décembre'}" ng-click="calendarYearCtrl.monthDisplay(month.name, calendarYearCtrl.dateTitle)">
+                <div ng-repeat="days in month.weeks" class="year-weeks">
+                    <span  ng-repeat="day in days.semaine"
+                            class="case day" 
+                            ng-class ="{today : day.isToday && day.isCurrentMonth,
+                            daysOff : !day.isCurrentMonth,
+                            ferie : day.isFerie && day.isCurrentMonth,
+                            selectedDate : selectedDateList.contains(day) && day.isCurrentMonth,
+                            selectedDateOff : selectedDateList.contains(day) && !day.isCurrentMonth}">{{day.date}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
