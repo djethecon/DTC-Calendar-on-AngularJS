@@ -29,13 +29,12 @@ Simlpe Calendrier créé avec le framework AngularJS
       var app = angular.module('App', ['DtcCalendarApp']);
     })();
 
-- ajouter ' ng-app="App" ' à la balise <html> du fichier 'index.html'  -----> <html ng-app="App">
+- ajouter ' ng-app="App" ' à la balise 'html'> du fichier 'index.html'  -----> html ng-app="App"
 
 
  #UTILISATION
  
-- insérer '<dtc-calendar></dtc-calendar>' entre les balises <body></body> 
-------> <body><dtc-calendar></dtc-calendar> </body>
+- insérer '<dtc-calendar></dtc-calendar>' entre les balises 'body' 
 
 # OPTIONNEL
 
