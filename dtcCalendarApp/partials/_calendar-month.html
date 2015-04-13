@@ -1,0 +1,18 @@
+<header class="header-header" ng-click="calendarMonthCtrl.yearDisplay(calendarMonthCtrl.dateTitle)">
+    {{calendarMonthCtrl.dateTitle.format("MMMM YYYY") | capitalize}}
+</header>
+<header class="week-name">
+    <span class=" date-name-title" 
+            ng-repeat="name in calendarMonthCtrl.daysName">{{name.name}}</span>
+</header>
+<div class="month">
+    <div ng-repeat="days in calendarMonthCtrl.weeks" class="weeks">
+        <span class="case day" 
+            ng-repeat="day in days.semaine"
+            ng-class = "{today : day.isToday && day.isCurrentMonth,
+                        daysOff : !day.isCurrentMonth,
+                        ferie : day.isFerie && day.isCurrentMonth,
+                        selectedDate : selectedDateList.contains(day) && day.isCurrentMonth,
+                        selectedDateOff : selectedDateList.contains(day) && !day.isCurrentMonth}" >{{day.date}}</span>
+    </div>
+</div>
