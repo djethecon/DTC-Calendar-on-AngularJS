@@ -34,7 +34,7 @@ Simlpe Calendrier créé avec le framework AngularJS
 
  #UTILISATION
  
-- insérer '<dtc-calendar></dtc-calendar>' entre les balises 'body' 
+- insérer la balise 'dtc-calendar' entre les balises 'body' 
 
 # OPTIONNEL
 
