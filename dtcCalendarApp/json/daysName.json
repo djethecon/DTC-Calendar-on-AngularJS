@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "lun."
+    },
+    {
+        "name" : "mar."
+    },
+    {
+        "name" : "mer."
+    },
+    {
+        "name" : "jeu."
+    },
+    {
+        "name" : "ven."
+    },
+    {
+        "name" : "sam."
+    },
+    {
+        "name" : "dim."
+    }
+]
