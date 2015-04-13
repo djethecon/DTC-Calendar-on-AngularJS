@@ -1,0 +1,17 @@
+<head>
+        <link rel="stylesheet" href="dtcCalendarApp/css/dtc-calendar.css">
+        <link rel="stylesheet" href="dtcCalendarApp/css/dtc-year.css">
+        <link rel="stylesheet" href="dtcCalendarApp/css/animate.min.css">
+    </head>
+    
+<!-- TopBar -->
+<div class="header">
+    <a ng-href="#/{{mainCtrl.type}}/{{mainCtrl.previousDate.format(mainCtrl.format)}}"><img class="header-button previous prev" ng-src="dtcCalendarApp/img/left-arrow.png" alt="précédent" ng-click="mainCtrl.previousMonth()"/></a>
+
+    <a ng-href="#/{{mainCtrl.type}}/{{mainCtrl.nextDate.format(mainCtrl.format)}}"><img class="header-button next next2" ng-src="dtcCalendarApp/img/right-arrow.png" alt="suivant" ng-click="mainCtrl.nextMonth()"/></a>
+</div>
+<!---->
+
+<!-- calendar with animation 'right/left/fade' effect-->
+<div class="calendar {{ui.direction}}" ng-view></div>
+<!-- -->
